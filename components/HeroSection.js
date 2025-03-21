@@ -118,7 +118,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <div className="relative min-h-screen text-white overflow-hidden flex flex-col justify-center items-center absolute h-full w-full px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#f97317_130%)]">
+    <div className="relative min-h-screen text-white overflow-hidden flex flex-col justify-center items-center absolute h-full w-full px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_43%,#f97317_130%)]">
       {/* Canvas for particle effect */}
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
