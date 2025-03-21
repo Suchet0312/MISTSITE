@@ -71,11 +71,11 @@ export default function HeroSection() {
     }
 
     for (let i = 0; i < numParticles; i++) {
-      const size = Math.random() * 3 + 1;
+      const size = Math.random() * 4 + 1;
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
-      const speedX = (Math.random() - 0.5) * 2;
-      const speedY = (Math.random() - 0.5) * 2;
+      const speedX = (Math.random() - 0.5) * 3;
+      const speedY = (Math.random() - 0.5) * 3;
       particles.push(new Particle(x, y, size, speedX, speedY));
     }
 
@@ -96,12 +96,10 @@ export default function HeroSection() {
 
   useEffect(() => {
     const domainList = [
-      "Cybersecurity",
-      "AI",
-      "Blockchain",
-      "Pentesting",
-      "Cryptography",
-      "Forensics",
+      "Technical",
+      "Web Dev",
+      "Research",
+      "SMGD",
     ];
 
     let currentIndex = 0;
@@ -114,13 +112,13 @@ export default function HeroSection() {
           return domainList.join(" | ");
         }
       });
-    }, 300);
+    }, 500);
 
     return () => clearInterval(matrixInterval);
   }, []);
 
   return (
-    <div className="relative min-h-screen text-white overflow-hidden flex flex-col justify-center items-center absolute h-full w-full px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#f97319_140%)]">
+    <div className="relative min-h-screen text-white overflow-hidden flex flex-col justify-center items-center absolute h-full w-full px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#f97317_130%)]">
       {/* Canvas for particle effect */}
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
@@ -153,7 +151,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-5xl md:text-7xl font-extrabold tracking-wide mt-10 z-10"
+        className="text-5xl md:text-7xl font-extrabold tracking-wide mt-10 z-10 "
       >
         {text}
         <span className="animate-pulse">|</span> {/* Blinking Cursor */}
