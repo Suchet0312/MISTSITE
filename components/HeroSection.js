@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 export default function HeroSection() {
   const canvasRef = useRef(null);
   const [text, setText] = useState("");
-  const words = ["MIST", "Manipal Information Security Team"];
+  const words = [">_MIST", ">_Manipal Information Security Team"];
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [showCipher, setShowCipher] = useState(false);
@@ -25,7 +25,7 @@ export default function HeroSection() {
           setTimeout(() => setIsDeleting(true), delay);
         }
       } else {
-        setText((prev) => currentWord.substring(0, prev.length - 1));
+        setText((prev) => currentWord.substring(0, prev.length-1));
         if (text === "") {
           setIsDeleting(false);
           setWordIndex((prev) => (prev + 1) % words.length);
@@ -151,7 +151,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-5xl md:text-7xl font-extrabold tracking-wide mt-10 z-10 "
+        className="text-3xl md:text-7xl font-bold tracking-wide mt-10 z-10 "
       >
         {text}
         <span className="animate-pulse">|</span> {/* Blinking Cursor */}
